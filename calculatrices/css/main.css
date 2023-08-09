@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #ededed;
+  transition: background-color 0.5s ease;
+}
+
+/* Style pour le mode sombre */
+body.dark-mode {
+  background-color: #1a1a1a;
+}
+
+.calculator-container{
+  padding: 30px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.calculator {
+  width: 310px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-height: 550px; /* Ajout d'une hauteur maximale à la calculatrice */
+  overflow-y: auto; /* Ajout du défilement vertical si nécessaire */
+  text-align: center;
+}
+
+#display {
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.num-buttons,
+.op-buttons {
+  flex: 1;
+}
+
+.num-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.op-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.num-btn, .op-btn {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clear-btn, #calculate-btn {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #f1a33c;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.history {
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 350px;
+  max-height: 350px; /* Hauteur maximale basée sur la hauteur de la calculatrice */
+  overflow-y: auto; /* Ajout du défilement vertical si nécessaire */
+}
+
+.history h2 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+#history-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#history-list li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.timestamp {
+  margin-top: 0.1rem;
+  font-size: 0.75rem;
+  color: #585858;
+}
+
+.calculator-others {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-link{
+  padding: 10px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.energy-calculator {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
